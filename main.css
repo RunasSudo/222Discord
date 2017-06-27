@@ -1,0 +1,17 @@
+﻿/*!
+    222Discord
+    Copyright © 2017 RunasSudo (Yingtong Li)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/.theme-dark .chat{background-color:#222}.theme-dark .chat>.content{background-color:#222}.theme-dark .friends-table,.theme-dark .messages-wrapper{background-color:#222}.theme-dark .chat form .typing{background-color:#222}.theme-dark .friends-table .messages .divider::before,.theme-dark .friends-table .messages .divider span,.theme-dark .messages-wrapper .messages .divider::before,.theme-dark .messages-wrapper .messages .divider span{background-color:#222}.theme-dark .friends-table .scroller-wrap.polyfill .scrollbar,.theme-dark .friends-table .scroller-wrap.polyfill .scrollbar::after,.theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar,.theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar::after{background-color:#222}.theme-dark .friends-table .scroller-wrap.polyfill .scrollbar .track,.theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar .track{background-color:#181818;border-color:#222}.theme-dark .friends-table .scroller-wrap.polyfill .scrollbar .thumb,.theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar .thumb{background-color:#222;border-color:#111}.theme-dark .friends-table .scroller-wrap.polyfill .scrollbar .thumb::after,.theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar .thumb::after{background-color:#111}.channels-wrap{background-color:#181818}.channels-wrap>div:first-child{background-color:#181818}.channels-wrap>div:first-child div[class^=contentSelectedText]{background-color:#222}.channels-wrap>div:first-child div[class^=scrollbar]{background-color:#181818 !important}.channels-wrap>div:first-child div[class^=scrollbar] div[class^=pad]{background-color:#181818 !important}.theme-dark .channel-members-wrap .channel-members{background-color:#181818}.theme-dark .channel-members-wrap div[class^=scrollbar]{background-color:#181818 !important}.theme-dark .channel-members-wrap div[class^=scrollbar] div[class^=pad]{background-color:#181818 !important}.guilds-wrapper{background-color:#111}.guilds-wrapper .guilds .guild .guild-inner{background-color:#181818 !important}

@@ -1,0 +1,96 @@
+/*!
+    222Discord
+    Copyright © 2017 RunasSudo (Yingtong Li)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+$sidecol: #111111; // Default #1e2124
+$panelcol: #181818; // Default #2f3136
+$chatcol: #222222; // Default #36393e
+
+// Chat window
+.theme-dark .chat {
+	background-color: $chatcol;
+	> .content {
+	background-color: $chatcol;
+	}
+}
+.theme-dark .friends-table, .theme-dark .messages-wrapper {
+	background-color: $chatcol;
+}
+.theme-dark .chat form .typing {
+	background-color: $chatcol;
+}
+.theme-dark .friends-table .messages .divider::before, .theme-dark .friends-table .messages .divider span, .theme-dark .messages-wrapper .messages .divider::before, .theme-dark .messages-wrapper .messages .divider span {
+	background-color: $chatcol;
+}
+
+// Scroll bars
+.theme-dark .friends-table, .theme-dark .messages-wrapper {
+	.scroller-wrap.polyfill .scrollbar {
+		&, &::after {
+			background-color: $chatcol;
+		}
+		.track {
+			background-color: $panelcol;
+			border-color: $chatcol;
+		}
+		.thumb {
+			background-color: $chatcol;
+			border-color: $sidecol;
+			&::after {
+				background-color: $sidecol;
+			}
+		}
+	}
+}
+
+// Channels panel
+.channels-wrap {
+	background-color: $panelcol;
+	> div:first-child { // Channels list
+		background-color: $panelcol;
+		div[class^=contentSelectedText] { // (Selected) channel
+			background-color: $chatcol;
+		}
+		div[class^=scrollbar] { // Channels scrollbar
+			background-color: $panelcol !important;
+			div[class^=pad] {
+				background-color: $panelcol !important;
+			}
+		}
+	}
+}
+
+// Members panel
+.theme-dark .channel-members-wrap {
+	.channel-members {
+		background-color: $panelcol;
+	}
+	div[class^=scrollbar] {
+		background-color: $panelcol !important;
+		div[class^=pad] {
+			background-color: $panelcol !important;
+		}
+	}
+}
+
+// Sidebar
+.guilds-wrapper {
+	background-color: $sidecol;
+	.guilds .guild .guild-inner {
+		background-color: $panelcol !important;
+	}
+}
