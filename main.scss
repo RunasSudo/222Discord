@@ -19,6 +19,8 @@
 $sidecol: #111111; // Default #1e2124
 $panelcol: #181818; // Default #2f3136
 $chatcol: #222222; // Default #36393e
+$chatboxcol: #292929; // Default #424549
+$highcol: #292929;
 
 // Chat window
 .theme-dark .chat {
@@ -56,6 +58,20 @@ $chatcol: #222222; // Default #36393e
 		}
 	}
 }
+.scrollerThemed-19vinI.themeGhostHairlineChannels-2lQojW .scrollbar-2so3Ly .thumb-3VsfAI {
+	background-color: rgba(32,34,37,.6);
+}
+
+// Chat box
+.theme-dark .channel-textarea-inner {
+	background-color: $chatboxcol;
+}
+.theme-dark .channel-textarea-autocomplete-inner {
+	background-color: $chatboxcol;
+}
+.theme-dark .channel-textarea-autocomplete-inner ul li.active {
+	background-color: $chatcol; // Default #3b3d42
+}
 
 // Channels panel
 .channels-wrap {
@@ -63,6 +79,9 @@ $chatcol: #222222; // Default #36393e
 	> div:first-child { // Channels list
 		background-color: $panelcol;
 		div[class^=contentSelectedText] { // (Selected) channel
+			background-color: $highcol;
+		}
+		div[class^=contentHoveredText] {
 			background-color: $chatcol;
 		}
 		div[class^=scrollbar] { // Channels scrollbar
