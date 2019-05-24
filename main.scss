@@ -1,6 +1,6 @@
 /*!
     222Discord
-    Copyright © 2017 RunasSudo (Yingtong Li)
+    Copyright © 2017, 2019 RunasSudo (Yingtong Li)
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -23,93 +23,101 @@ $chatboxcol: #292929; // Default #424549
 $highcol: #292929;
 
 // Chat window
-.theme-dark .chat {
+.theme-dark [class|=chat] {
 	background-color: $chatcol;
-	> .content {
-	background-color: $chatcol;
+	> [class|=content] {
+		background-color: $chatcol;
 	}
-}
-.theme-dark .friends-table, .theme-dark .messages-wrapper {
-	background-color: $chatcol;
-}
-.theme-dark .chat form .typing {
-	background-color: $chatcol;
-}
-.theme-dark .friends-table .messages .divider::before, .theme-dark .friends-table .messages .divider span, .theme-dark .messages-wrapper .messages .divider::before, .theme-dark .messages-wrapper .messages .divider span {
-	background-color: $chatcol;
-}
-
-// Scroll bars
-.theme-dark .friends-table, .theme-dark .messages-wrapper {
-	.scroller-wrap.polyfill .scrollbar {
-		&, &::after {
-			background-color: $chatcol;
+	[class|=messagesWrapper] {
+		background-color: $chatcol;
+	}
+	form {
+		background-color: $chatcol;
+	}
+	
+	> [class|=title] {
+		background-color: $chatcol;
+		[class|=children]::after {
+			background: none;
 		}
-		.track {
-			background-color: $panelcol;
-			border-color: $chatcol;
-		}
-		.thumb {
-			background-color: $chatcol;
-			border-color: $sidecol;
-			&::after {
-				background-color: $sidecol;
+	}
+	
+	[class|=messagesWrapper] {
+		[class|=scrollbar] {
+			background-color: $chatcol !important;
+			[class|=pad] {
+				background-color: $chatcol !important;
+			}
+			[class|=track] {
+				background-color: $panelcol !important;
+				border-color: $chatcol !important;
+			}
+			[class|=thumb] {
+				background-color: $sidecol !important;
+				border-color: $chatcol !important;
 			}
 		}
 	}
-}
-.scrollerThemed-19vinI.themeGhostHairlineChannels-2lQojW .scrollbar-2so3Ly .thumb-3VsfAI {
-	background-color: rgba(32,34,37,.6);
 }
 
 // Chat box
-.theme-dark .channel-textarea-inner {
-	background-color: $chatboxcol;
-}
-.theme-dark .channel-textarea-autocomplete-inner {
-	background-color: $chatboxcol;
-}
-.theme-dark .channel-textarea-autocomplete-inner ul li.active {
-	background-color: $chatcol; // Default #3b3d42
+.theme-dark [class|=channelTextArea] {
+	background-color: $chatcol;
+	
+	> [class|=inner] {
+		background-color: $chatboxcol;
+		
+		> [class|=autocomplete] {
+			background-color: $chatboxcol;
+			
+			[class^=selectorSelected] {
+				background-color: $chatcol; // Default #3b3d42
+			}
+		}
+	}
 }
 
 // Channels panel
-.channels-wrap {
+.theme-dark [class|=channels] {
 	background-color: $panelcol;
-	> div:first-child { // Channels list
+	> [class|=container] {
 		background-color: $panelcol;
-		div[class^=contentSelectedText] { // (Selected) channel
+	}
+}
+
+.theme-dark [class|=channels], .theme-dark [class|=membersWrap] {
+	[class|=scroller] {
+		[class*=wrapper][class*=modeSelected] [class|=content] {
 			background-color: $highcol;
 		}
-		div[class^=contentHoveredText] {
+		[class*=wrapper]:hover [class|=content] {
 			background-color: $chatcol;
 		}
-		div[class^=scrollbar] { // Channels scrollbar
+	}
+	
+	[class|=scrollbar] {
+		background-color: $panelcol !important;
+		[class|=pad] {
 			background-color: $panelcol !important;
-			div[class^=pad] {
-				background-color: $panelcol !important;
-			}
+		}
+		[class|=thumb] {
+			background-color: $chatcol !important;
 		}
 	}
 }
 
 // Members panel
-.theme-dark .channel-members-wrap {
-	.channel-members {
-		background-color: $panelcol;
-	}
-	div[class^=scrollbar] {
-		background-color: $panelcol !important;
-		div[class^=pad] {
-			background-color: $panelcol !important;
-		}
-	}
+.theme-dark [class*=members-] {
+	background-color: $panelcol;
 }
 
 // Sidebar
-.guilds-wrapper {
+.theme-dark [class|=flex] > [class|=wrapper] {
 	background-color: $sidecol;
-	.guilds .guild .guild-inner {
-		background-color: $panelcol !important;
+	
+	[class|=listItem] {
+		[class|=acronym], [class|=button] {
+			background-color: $panelcol;
+		}
 	}
 }
