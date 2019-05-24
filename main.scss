@@ -34,6 +34,9 @@ $highcol: #292929;
 	form {
 		background-color: $chatcol;
 	}
+	[class|=typing] {
+		background-color: $chatcol;
+	}
 	
 	> [class|=title] {
 		background-color: $chatcol;
